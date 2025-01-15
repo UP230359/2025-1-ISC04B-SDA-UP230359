@@ -16,7 +16,7 @@ print("Even numbers count: ", even_numbers)
 print("Odd  numbers count: ", odd_numbers)
  
 counter = -3
-while counter:
+while counter:  
     print("Inside the loop.", counter)
     counter += 1
 print("Outside the loop.", counter)

@@ -70,7 +70,6 @@ print(a,b)
 
 # list.remove()
  
-# ramirez, gutierrez, Quinones
 # Without using reverse.
 length = len(my_list)
 for i in range(length // 2):
