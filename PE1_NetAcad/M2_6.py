@@ -3,7 +3,7 @@
 import os
 import time
 
-print("What is your last name")
+print("What is your last name:")
 lastName = input()
 
 Name = input("What is your name: ")
@@ -31,7 +31,7 @@ leg_c = (leg_a**2 + leg_b**2) ** .5
 
 print(leg_c)
 print(round(leg_c,4))
-print("%.3f" % leg_c)
+print("%.3f" % leg_c) # poco usual
 print(f'{leg_c:.2f}')
 
 print(f'{1000000:,.2f}')   # separados por comas
@@ -47,6 +47,8 @@ x = float(input("Enter value for x: "))
 y = 1 / ( x + 1/(x+1/(x + 1/x)))
 print("y =", y)
 
+
+
 # Lab2
 '''
                hh:mm 
@@ -57,6 +59,8 @@ Example: start 12:17
 hour = int(input("Starting time (hours): "))
 mins = int(input("Starting time (minutes): "))
 dura = int(input("Event duration (minutes): "))
+
+
 
 tot_min = mins + dura
 add_hor = tot_min // 60

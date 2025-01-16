@@ -16,7 +16,7 @@ print("Even numbers count: ", even_numbers)
 print("Odd  numbers count: ", odd_numbers)
  
 counter = -3
-while counter:  
+while counter:  # Verdadero si counter es distinto de 0
     print("Inside the loop.", counter)
     counter += 1
 print("Outside the loop.", counter)
@@ -41,7 +41,7 @@ print(
 
 
 # range() function accepts only integers as its arguments
-for i in range(10): # 0..9  range(1,11)=1..10  range(2,8,3)=
+for i in range(10): # 0..9  range(1,11)=1..10  range(2,8,3)=2,5
     pass
     # continue
     print(i)

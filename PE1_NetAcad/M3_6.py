@@ -79,6 +79,9 @@ for i in range(len(my_list)):
         my_new.append(my_list[i])
 print(my_new)
 
+lista_unica = set(my_list)
+print(lista_unica)
+
 
 
 
