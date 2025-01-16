@@ -112,4 +112,6 @@ becks = Beer("Hola") # constructor - create class
 print(becks.content) # beer empty: b.content == 0
 print(becks.__len__()) # beer empty: b.content == 0
 
+corona =Beer("Modelo")
+
 '''
