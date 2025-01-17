@@ -13,3 +13,4 @@ print("lista: ", y)
 mayores = list(filter(lambda x: x>2, lista)) 
 print("Mayores:" , mayores)
 
+# Eso es todo por hoy
