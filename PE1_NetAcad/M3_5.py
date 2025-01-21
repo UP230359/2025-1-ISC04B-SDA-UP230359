@@ -1,7 +1,7 @@
 # Sorting lists: bubble sort
 
 my_list = [8, 10, 6, 2, 4]  # list to sort
-swapped = True  # It's a little fake, we need it to enter the while loop.
+swapped = False  # It's a little fake, we need it to enter the while loop.
 
 while swapped:
     swapped = False  # no swaps so far

@@ -12,6 +12,7 @@ print(ordenado)
 for i in range(0, len(numbers)):   # length
     print(numbers[i], end="\t")
 print()
+
 for i in numbers:
     print(i, end="\t")
 print()
@@ -21,9 +22,11 @@ print(numbers)
 
 numbers.remove(7)  # Remove the first occurrence of value
 del numbers[1]     # Remove by position
+numbers.pop(2)     # Remove by position
 
 print(len(numbers))
-print(numbers[3])  # IndexError: list index out of range
+print("Numeros:", numbers)
+print(numbers[2])  # IndexError: list index out of range
 print(numbers[-2]) # the element before last in the list
 
 # removes the last element from the list
@@ -35,7 +38,7 @@ print(numbers)
 numbers.append(13)
 
 # insert at any place int the list
-numbers.insert(3,33)  # position, value
+numbers.insert(300,33)  # position, value
 
 print("--->", numbers)
 # Function
@@ -45,7 +48,7 @@ r = len("hello")
 # Method
 # result = data.method(arg)
 name = "Universidad"
-r = name.replace("sida", "vih")
+name = name.replace("sida", "vih")
 print(r)
 
 # methods
@@ -61,12 +64,14 @@ for i in range(5):
 print(my_list)
 print(suma)
 print(np.sum(my_list))
+sum(my_list)
 
 # swap
 a = 5
 b = 6
 a, b = b, a
 print(a,b)
+
 
 # list.remove()
  
@@ -85,7 +90,7 @@ print(my_list[2][2])
 print(my_list[2][2][1])
 del my_list
 
-nombre = "  Universidad Politecnica    "
+nombre = "  Universidad    Politecnica    "
 nombre = nombre.strip()   # trim
 print(nombre[6:10])
 x = nombre.split()
@@ -112,6 +117,6 @@ becks = Beer("Hola") # constructor - create class
 print(becks.content) # beer empty: b.content == 0
 print(becks.__len__()) # beer empty: b.content == 0
 
-corona =Beer("Modelo")
+corona = Beer("Modelo")
 
 '''

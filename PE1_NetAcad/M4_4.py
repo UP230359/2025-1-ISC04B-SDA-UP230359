@@ -12,7 +12,7 @@ def my_function3():
     var = 3
     print("Do I know that variable?", var)
 
-var = 1
+var = 1   ## Global variable
 my_function1()
 my_function2()
 print(var)

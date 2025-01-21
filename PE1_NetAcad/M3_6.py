@@ -28,16 +28,16 @@ print(list_1)
 print(list_1[2:4])            # [  :    )
 print(list_1[:])              # all
 print(list_1[0: len(list_1)]) # all
-print(list_1[1:-1])           # [  : end)
+print("1:-1", list_1[1:-1])           # [  : end)
 print(list_1[1:])             # [1 : end]
 print(list_1[:3])             # [0 :   3)
 
 a = 0 ^ 1
 print(a)
 
-nums = [1,2,3]
-vals = nums[-1:-2]
-print(vals)
+nums = [1,2,3,4,5]
+vals = nums[-2:-1]
+print("vals: ", vals)
 
 my_list = [[0, 1, 2, 3] for i in range(2)]
 print(my_list)
@@ -64,7 +64,7 @@ if found:
     print("index: ", i)
 else:
     print("absent")    
-# print(my_list.index(18))    
+print(my_list.index(8))    
 
 # how many numbers are in drawn
 drawn = [5, 11, 9, 42, 3, 49]

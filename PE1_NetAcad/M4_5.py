@@ -23,6 +23,16 @@ def factorial_R(n):
         return 1
     return n * factorial_R(n-1)
 
+def contador(n):
+    if n == 0:
+        print("BOOM!")
+    else:
+        print(n)
+        contador(n-1) 
+
+contador(5)        
+
+
 def fib(n):
     if n < 1:
         return None
@@ -53,13 +63,14 @@ def fun(a):
 print("fun ", fun(25))
 
 
-# print(bmi(352.5, 1.65))
+# print(bmi(352.5, 1.65))   // indice de masa corporal
 print(factorial(0))
 print(factorial_R(5))
+
 for n in range(1, 10): # testing
     print(n, "->", fib_R(n))
 
- 
+
 
 
 

@@ -53,16 +53,17 @@ print(dict1.get("Perro"))    # igual al anterior
 print("gata" in dict1)
 dict1['Perro']="ladra"              # Cambiar
 dict1["loro"]="habla"               # agregar
-dict1.update({"perico":"canta"})    # agregar
-del dict1["perico"]                 # Eliminar una clave
-dict1.pop("raton")                  # Eliminar por clave
-dict1.popitem()                     # Eliminar ultimo elemento
+dict1.update({"loro":"speak"})      # agregar o actualizar
+print("Diccionario 1:", dict1)
 
+# del dict1["perico"]                 # Eliminar una clave
+dict1.pop("raton")                  # Eliminar por clave
+dict1.popitem()                      # Eliminar ultimo elemento
 print("\nDiccionarios:")
 for llave in dict1:
     print(llave)
 
-for llave in sorted(dict1.keys()):
+for llave in sorted(dict1.keys()):  # 0, A, a, 
     print(llave, ":", dict1[llave])
 print()
 
@@ -77,7 +78,7 @@ print()
 school_class={"carlos": (9,7,8,9), "juan":(8,9,4,7)}
 school_class["charlie"] = (5,)     # primera vez
 school_class["charlie"] += (10,)   # ya existe, agregar
-print(school_class)
+print("school_class:", school_class)
 
 # Average by student
 for name in sorted(school_class.keys()):
@@ -117,7 +118,7 @@ print(lista)
 
 
 tup = 1, 2, 3, 2, 4, 5, 6, 2, 7, 2, 8, 9
-print(tup.count(2))  # Numero de dos en la tupla
+print(tup.count(2))  # Numero de veces 2 en la tupla
 
 d1 = {'Adam Smith': 'A', 'Judy Paxton': 'B+'}
 d2 = {'Mary Louis': 'A', 'Patrick White': 'C'}
@@ -149,7 +150,7 @@ c = {'CoolCompany' : {'Alice' : 33, 'Bob' : 23, 'Frank' : 29},
 
 ## One-Liner to find illegal companies
 i = [x for x in c if any (y<9 for y in c[x].values())]
-print(i)
+print("-->", i)
 # ['CheapCompany', 'SosoCompany']
 
 ## Data

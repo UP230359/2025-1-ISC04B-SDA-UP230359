@@ -43,7 +43,7 @@ print(
 # range() function accepts only integers as its arguments
 for i in range(10): # 0..9  range(1,11)=1..10  range(2,8,3)=2,5
     pass
-    # continue
+    continue
     print(i)
     break
     print("hola")

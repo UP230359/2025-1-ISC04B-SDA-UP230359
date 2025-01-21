@@ -13,9 +13,7 @@ for i in range(8):
 print(board)    
 
 a = np.array([7,2,4])
-b = np.array([[1, 2, 3, 6],
-              [4, 5, 6, 15],
-              [7, 8, 9, 24]])  # 3 X 4
+b = np.array([[1, 2, 3, 6], [4, 5, 6, 15], [7, 8, 9, 24]])  # 3 X 4
 
 c = np.array([[[2,17,23,1],[45,78,45,3],[5,6,7,8]],
               [[9,27,13,9],[35,68,35,5],[1,2,3,4]]])
@@ -24,8 +22,9 @@ print(c[1][2][3])
              
 print(b.shape)
 print(b.shape[0])
-print(b[2,1])
-print("np.where", np.where(a > 3))
+print("-->", b[2,1])
+print("-->", b[2][1])
+print("np.where", np.where(a > 3)) # positions where the condition is true
 
 board1 = [[i+j for j in range(3)] for i in range(7)]  # 7 X 3
 board2 = np.array(board1)
