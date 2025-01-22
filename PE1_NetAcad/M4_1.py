@@ -23,6 +23,7 @@ lista = [4,7,1]
 ordenada = sorted(lista)
 print(ordenada)
 
+
 y=list(map(lambda x:x+3,lista))  # lista es el valor de cada x
 print("lista: ", y)
 

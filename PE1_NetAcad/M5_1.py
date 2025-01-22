@@ -30,7 +30,6 @@ def Col(i):
     c = i - Fil(i) * col - 1
     return c
 
-
 '''
 def display_board(board):
     print("+-------+-------+-------+")
@@ -45,6 +44,7 @@ def display_board(board):
         print("+-------+-------+-------+")
 '''
 
+
 def display_board(board):
     print("+-------" * 3, "+", sep="")
     for row in range(3):
@@ -54,6 +54,7 @@ def display_board(board):
         print("|")
         print("|       " * 3, "|", sep="")
         print("+-------" * 3, "+", sep="")
+
 
 def enter_move(board):
     # The function accepts the board's current status, asks the user about their move,

@@ -1,10 +1,9 @@
 # 9
-""" 
-print = 5
-in  = 5
-for = 4
+#print = 5
+#in  = 5
+#for = 4
 In = 5
- """
+
 
 # 14
 nums = [1,2,3]

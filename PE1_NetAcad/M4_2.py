@@ -21,7 +21,7 @@ y = potencia(2,3)
 y = potencia(exponente=3, base= 2)
 y = potencia(2, exponente=3)
 y = potencia(2)
-
+y = potencia(3, 0); print("0: ", y)
 # y = cuadratica1(1, c=15, b= -8)
 print(y)
 

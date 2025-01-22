@@ -9,11 +9,11 @@ os.system("cls")
 # aislar el problema
 # course: Testing Essentials with Python
 
-y=1
-assert y==1
+y = 1
+# assert y==1
 
-if y==0:
-    raise AssertionError()
+if y == 0:
+    raise AssertionError("y no puede ser 1")
 
 try: 
     y = 5/0
@@ -26,6 +26,8 @@ except:
     print("division by zero")
 finally:
     print("Cool")
+
+
 print(". . . Hecho")
 # https://docs.python.org/3/library/exceptions.html
 

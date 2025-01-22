@@ -67,9 +67,8 @@ print("fun ", fun(25))
 print(factorial(0))
 print(factorial_R(5))
 
-for n in range(1, 10): # testing
-    print(n, "->", fib_R(n))
-
+for n in range(1, 3): # testing
+    print(n, "->", fib(n))
 
 
 

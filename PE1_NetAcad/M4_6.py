@@ -43,7 +43,10 @@ dict0 = {}   # vacia
 dict1 = {"gato":"miau", "Perro": "guau", "raton":1}
 dict2 = {"gato":"miau", "Perro": "guau", "raton":1, 3:"tres", 4:40}
 dict2.clear()
-dict2 = dict1.copy()
+print(dict2)
+dict2 = dict1
+# dict2 = dict1.copy() # copiar los datos
+
 
 print(dict1)
 print(len(dict1))
@@ -60,7 +63,7 @@ print("Diccionario 1:", dict1)
 dict1.pop("raton")                  # Eliminar por clave
 dict1.popitem()                      # Eliminar ultimo elemento
 print("\nDiccionarios:")
-for llave in dict1:
+for llave in dict1: # Si no se especifica, se recorren las llaves
     print(llave)
 
 for llave in sorted(dict1.keys()):  # 0, A, a, 
@@ -108,6 +111,7 @@ lista = [2, 5, 8]
 tupla = tuple(lista)
 
 nombre ="UPA"
+print(type(nombre)) # <class 'str'>
 tupla2 = tuple(nombre)
 print(tupla2)    
 
@@ -148,6 +152,13 @@ c = {'CoolCompany' : {'Alice' : 33, 'Bob' : 23, 'Frank' : 29},
      'CheapCompany' : {'Ann' : 4, 'Lee' : 9,'Chrisi' : 7},
      'SosoCompany' : {'Esther' : 38, 'Cole' : 8, 'Paris' : 18}}
 
+#  solo llaves de los diccionarios
+llaves = [x for x in c] 
+print("\nllaves: ", llaves)
+
+subdiccionarios = [x for x in c.values()]
+print("\nsubdiccionarios: ", subdiccionarios)
+
 ## One-Liner to find illegal companies
 i = [x for x in c if any (y<9 for y in c[x].values())]
 print("-->", i)
@@ -164,7 +175,9 @@ db = [dict(zip(cols, row)) for row in db]
 
 ## Result
 print()
-print(db)
+print(db) # genera una lista, cada elemento es un diccionario
+# [{'name': 'Alice', 'salary': 180000, 'job': 'scientist'},
+
 
 
 

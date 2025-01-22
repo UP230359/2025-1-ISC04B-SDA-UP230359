@@ -2,13 +2,14 @@
 # None = Null
 
 import numpy as np
-# print(None + 2)
+#print(None + 2)
 a = None
 b = True if a==None else False
 print(b)
 
 def no_return():
-    pass
+    # pass
+    a = 1
 
 print(no_return())
 
@@ -22,6 +23,8 @@ def isLeap(year):
         return False
     else:
         return True
+
+print("bisiesto: ", isLeap(2000))
 
 def days_in_month(year, month):
     dias=[31,28,31,30,31,30,31,31,30,31,30,31]

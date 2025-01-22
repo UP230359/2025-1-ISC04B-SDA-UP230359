@@ -15,13 +15,18 @@ dictionary = {}
 my_list = ['a', 'b', 'c', 'd']
 
 for i in range(len(my_list) - 1):
+    #dictionary[my_list[i]] = i
     dictionary[my_list[i]] = (my_list[i], )
+print(dictionary)
 
+print("-->")
 for i in sorted(dictionary.keys()):
     k = dictionary[i]
     print(k)
 # Insert your code here.
     print(k[0])
+print("<--")
+
 
 # 13
 def fun(x):
@@ -40,7 +45,8 @@ print(fun(out=2))
 tup = (1,2,3,4)
 print(tup[0])
 
-# print("a"/"a")
+
+# print("a"/"a") # TypeError: unsupported operand type(s) for /: 'str' and 'str'
 
 '''
 # 16
@@ -53,11 +59,10 @@ def my_list(my_list):
 print(my_list(my_list))
 '''
 
-'''
+
 def fun(x):
     if x %2 == 0:
         return 1
     else:
-        return
+        return 
 print(fun(fun(2))+1)    
-'''
