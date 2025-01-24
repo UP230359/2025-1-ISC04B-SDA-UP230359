@@ -10,7 +10,7 @@ os.system("cls")
 # course: Testing Essentials with Python
 
 y = 1
-# assert y==1
+assert y==1
 
 if y == 0:
     raise AssertionError("y no puede ser 1")

@@ -1,7 +1,11 @@
 # Returning a result from a function
 # None = Null
 
+# c:\>python -m pip install numpy
+# c:\>pip install matplotlib
+
 import numpy as np
+
 #print(None + 2)
 a = None
 b = True if a==None else False
@@ -26,19 +30,10 @@ def isLeap(year):
 
 print("bisiesto: ", isLeap(2000))
 
-def days_in_month(year, month):
-    dias=[31,28,31,30,31,30,31,31,30,31,30,31]
-    suma = 0
-    for i in range(12):
-        suma = suma + dias[i]
-    suma = np.sum(dias[0:month-1])           
-    total = suma+1 if isLeap(year) else suma
-    return suma
-
-def day_of_year(year, month, day):
-    
-    total = days_in_month(year, month)+day
-    return total
+def days_of_year(year, month, day):
+    dias=[0,31,28,31,30,31,30,31,31,30,31,30,31]
+    if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0): dias[2] = 29
+    return sum(dias[:month])+day           
 
 print(day_of_year(2000,2,2))
 
@@ -75,6 +70,7 @@ def list_updater(lst):
  
 foo = [1, 2, 3, 4, 5]
 print(list_updater(foo))
+
 
 # 1 American mile = 1609.344 metres
 # 1 American gallon = 3.785411784 litres
