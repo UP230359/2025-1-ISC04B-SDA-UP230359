@@ -29,6 +29,7 @@ def my_function4(my_list_1):
 my_list_2 = [2, 3]
 my_function4(my_list_2)
 print("Print #5:", my_list_2)
+# print("Print #6:", my_list_1)
 print()
 
 def my_function5(my_list_1):

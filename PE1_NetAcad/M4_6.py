@@ -27,7 +27,7 @@ t2 = (4, 6, 8, "Ten")
 t3 = (5, var )
 t4 = [10, var]   # 10, 55
 var = 20
-print("-->", t4) # 10, 55
+print("-->", t4) # 10, 20
 
 t1, t2 = t2, t1
 print(t1)
@@ -43,7 +43,7 @@ print(t4)
 
 dict0 = {}   # vacia
 dict1 = {"gato":"miau", "Perro": "guau", "raton":1}
-dict2 = {"gato":"miau", "Perro": "guau", "raton":1, 3:"tres", 4:40}
+dict2 = {"gato":"miau", "Perro": "guau", "raton":1, 3:"tres", 3:40}
 dict2.clear()
 print(dict2)
 dict2 = dict1

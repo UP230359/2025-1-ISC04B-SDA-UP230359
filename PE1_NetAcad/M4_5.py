@@ -22,6 +22,8 @@ def factorial_R(n):
     if n == 1:
         return 1
     return n * factorial_R(n-1)
+r = factorial_R(4)
+
 
 def contador(n):
     if n == 0:
