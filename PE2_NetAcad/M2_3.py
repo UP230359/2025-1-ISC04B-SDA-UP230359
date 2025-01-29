@@ -1,6 +1,6 @@
 # Sección 3 – Métodos de Cadenas
 '''
-capitalize(): cambia todas las letras de la cadena a mayúsculas.
+capitalize(): cambia la primera letra de la oracion en mayúscula.
 center(): centra la cadena dentro de una longitud conocida.
 count(): cuenta las ocurrencias de un carácter dado.
 join(): une todos los elementos de una tupla/lista en una cadena.

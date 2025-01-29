@@ -63,7 +63,7 @@ print()
 
 print("F" in alpha)
 print("Ef" in alpha)
-print("F" not in alpha)
+print("f" not in alpha)
 
 
 alphabet = "bcdefghijklmnopqrstuvwxy"

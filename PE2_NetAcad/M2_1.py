@@ -3,7 +3,7 @@
 # Las computadoras almacenan los caracteres como números
 # ASCII (American Standard Code for Information Interchange)
 # ASCII (Código Estándar Americano para Intercambio de Información)
-# 256 caracteres diferentes A=65, a=97
+# 256 caracteres diferentes 0 = 48  A=65    a=97  
 # El código ASCII emplea ocho bits para cada signo = 256 Caracteres
 # 128 alfabeto latino estandar
 # Internacionalizacion = I18N
