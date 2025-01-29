@@ -16,7 +16,7 @@ print()
 # Las cadenas pueden ser Concatenadas (unidas) o Replicadas
 str1 = 'a'
 str2 = 'b'
-print(str1 + str2)
+print(str1 + str2) 
 print(str2 + str1)
 print(5 * 'a')
 print('b' * 4)
@@ -62,7 +62,7 @@ print(alpha[1::2]) # beg
 print()
 
 print("F" in alpha)
-print("Ef" in alpha)
+print("ef" in alpha)
 print("f" not in alpha)
 
 
@@ -70,7 +70,7 @@ alphabet = "bcdefghijklmnopqrstuvwxy"
 alphabet = "a" + alphabet
 alphabet = alphabet + "z"
 print(alphabet)
-print(min(alphabet), max(alphabet))
+print("min-max", min(alphabet), max(alphabet))
 
 lista = [2,5,1]
 print(min(lista))
@@ -80,7 +80,7 @@ lista = list(alphabet)
 print(lista)
 
 # Demostración del método count():
-print("abcabc".count("b"))
+print("count", "abcabc".count("bc"))
 print('abcabc'.count("d"))
 
 # Funciones de cadenas

@@ -21,7 +21,7 @@ isalpha(): ¿La cadena consta solo de letras?
 islower(): ¿La cadena consta solo de letras minúsculas?
 isspace(): ¿La cadena consta solo de espacios en blanco?
 isupper(): ¿La cadena consta solo de letras mayúsculas?
-startswith(): ¿La cadena consta solo de letras mayúsculas?
+startswith(): ¿La cadena empieza con ?
 '''
 
 print('aBcD'.capitalize())
@@ -67,7 +67,7 @@ print(' \n '.isspace())
 print("Moooo".isupper())
 
 a =",".join(["A", "B", "C"])
-print(a)
+print("join",a)
 b = a.split(",")
 print(b)
 
