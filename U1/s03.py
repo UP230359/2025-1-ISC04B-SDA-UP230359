@@ -20,6 +20,7 @@ my_list.append(1)
 # Crear una instancia de la clase Persona
 persona = Persona("Juan Pérez", 50000, date(1990, 5, 23))
 print(persona.mostrar_info())
+print(persona)
 
 personas = []
 personas.append(Persona("Ana López", 60000, date(1985, 12, 15)))

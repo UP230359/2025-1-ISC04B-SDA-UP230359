@@ -28,7 +28,7 @@ print('aBcD'.capitalize())
 print(' aBcD'.capitalize())
 print('[' + 'hola'.center(11) + ']')
 print('[' + 'hola'.center(11,'*') + ']')
-
+ 
 if "epsilon".endswith("on"):    # .startwith
     print("si")
 else:

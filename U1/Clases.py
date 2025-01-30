@@ -12,4 +12,7 @@ class Persona:
                 f"Fecha de Nacimiento: {self.fecha_nacimiento}, "
                 f"Mes: { self.fecha_nacimiento.month } ")
         
-        
+    def __str__(self):
+        return ("{" + "nombre:" + self.nombre + ", " +
+                      "sueldo:" + str(self.sueldo) + ", " +
+                      "fecha:"  + str(self.fecha_nacimiento) +"}")
