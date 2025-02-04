@@ -16,8 +16,8 @@ class ExampleClass:
     def set_second(self, val = 2):
         self.second = val
 
-example_object_1 = ExampleClass()
-example_object_2 = ExampleClass(2)
+example_object_1 = ExampleClass()  # 10
+example_object_2 = ExampleClass(2) # 2
 
 example_object_2.set_second(3)
 

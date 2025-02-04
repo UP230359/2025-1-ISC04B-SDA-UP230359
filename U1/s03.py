@@ -28,7 +28,8 @@ personas.append(Persona("Pedro Infante", 70000, date(1970, 3, 3)))
 
 print(personas[0].mostrar_info())
 print(personas[1].mostrar_info())
-
+personas[0].nombre = "Ana García"
+print(personas[0].mostrar_info())
 # Buscar a una persona por nombre
 persona_buscada = next((p for p in personas if p.nombre == "Pedro Infante"), None)
 if persona_buscada:

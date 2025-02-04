@@ -40,24 +40,25 @@ try:
 except:
     print("fallido")
  
-obj._Classy__hidden()
+obj._Classy__hidden()  # se puede acceder a un método oculto
 
 # 4.2 La vida al interior de las clases y objetos
-print(obj.__dict__)
-print(Classy.__dict__)
+print(obj.__dict__)    # contiene los nombres y valores de todas las propiedades (variables) que el objeto contiene actualmente.
+print(Classy.__dict__) # contiene los nombres y valores de todas las propiedades (variables) que la clase contiene actualmente.
 
 # Nombre de la clase
 print("Nombres:")
-print(Classy.__name__)
-print(type(obj).__name__)
+print(Classy.__name__) 
+print(type(obj).__name__)     # type(obj) es la clase a la que pertenece el objeto
+print(obj.__class__.__name__) # __class__ es una referencia a la clase a la que pertenece el objeto
 
-#  almacena el nombre del módulo que contiene la definición de la clase
+# almacena el nombre del módulo que contiene la definición de la clase
 # cualquier módulo llamado __main__  es el archivo actualmente en ejecución.
 print("Modulos")
-print(Classy.__module__)
-print(obj.__module__)
+print(Classy.__module__) # __main__ 
+print(obj.__module__)    # __main__
 
-printBases(Classy)
+printBases(Classy) # ( object ) Herencia de la clase Classy
 print("<---")
 
 
@@ -83,9 +84,9 @@ obj.z = 5
 def incIntsI(obj):
     for name in obj.__dict__.keys():
         if name.startswith('i'):
-            val = getattr(obj, name)
+            val = getattr(obj, name) # getattr() es una función que devuelve el valor de la propiedad de un objeto.
             if isinstance(val, int):
-                setattr(obj, name, val + 1)
+                setattr(obj, name, val + 1) # setattr() es una función que establece el valor de la propiedad de un objeto.
 
 
 print(obj.__dict__)

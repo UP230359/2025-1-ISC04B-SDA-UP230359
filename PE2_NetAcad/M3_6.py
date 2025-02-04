@@ -1,6 +1,6 @@
 # Seccion 6. Mas sobre excepciones
-
 '''
+
 def reciprocal(n):
     try:
         n = 1 / n
@@ -23,6 +23,9 @@ except Exception as e:   # permite interceptar un objeto
     print(e)
     print(e.__str__())
 
+
+'''
+'''
 # todas las clases de excepción predefinidas en forma de árbol.
 def print_exception_tree(thisclass, nest = 0):
     if nest > 1:
@@ -35,11 +38,13 @@ def print_exception_tree(thisclass, nest = 0):
     for subclass in thisclass.__subclasses__():
         print_exception_tree(subclass, nest + 1)
 
-# print_exception_tree(BaseException)
-# print_exception_tree(Exception)
-print_exception_tree(ValueError)
+print_exception_tree(BaseException)
+#print_exception_tree(Exception)
+#print_exception_tree(OSError)
+'''
 
-# 3.6.3 Anatomía detallada de las excepciones
+'''
+# 3.6.3 Anatomía detallada de las excepciones +-
 def print_args(args):
     lng = len(args)
     if lng == 0:
@@ -67,7 +72,8 @@ except Exception as e:
     print(e, e.__str__(), sep=' : ', end=' : ')
     print_args(e.args)
 '''
-	
+
+
 # 3.6.4 Cómo crear tu propia excepción
 class PizzaError(Exception):
     def __init__(self, pizza='desconocida', message=''):
@@ -85,7 +91,7 @@ def make_pizza(pizza, cheese):
     if pizza not in ['margherita', 'capricciosa', 'calzone']:
         raise PizzaError
     if cheese > 100:
-        raise TooMuchCheeseError
+        raise TooMuchCheeseError(pizza, cheese)
     print("¡Pizza lista!")
  
  
@@ -93,7 +99,7 @@ for (pz, ch) in [('calzone', 0), ('margherita', 110), ('mafia', 20)]:
     try:
         make_pizza(pz, ch)
     except TooMuchCheeseError as tmce:
-        print(tmce, ':', tmce.cheese)
+        print(tmce.pizza, ':', tmce.cheese)
     except PizzaError as pe:
         print(pe, ':', pe.pizza)
        
@@ -109,4 +115,5 @@ try:
 except NewValueError as nve:
     for arg in nve.args:
         print(arg, end='! ')
+
 

@@ -1,5 +1,5 @@
 # Herencia
-
+'''
 class Vehicle:
     pass
 
@@ -45,7 +45,7 @@ string_1 = "Mary tenía un "
 string_2 = "Mary tenía un corderito"
 string_1 += "corderito"
 
-print(string_1 == string_2, string_1 is string_2)
+print(string_1 == string_2, string_1 is string_2) # == checa contenido, is checa referencia
 
 #------------------------------------------------------------------------------
 # Herencia multiple
@@ -87,16 +87,16 @@ class Wheels:       # ruedas
         print("ruedas: ", left, on)
 
 class Vehicle:
-    def __init__(self, controller):
+    def __init__(self, controller): # controlador de vehiculo (ruedas o pistas)
         self.controller = controller
 
     def turn(self, left):
         self.controller.change_direction(left, True)
-        time.sleep(0.25)
+        time.sleep(1.25)
         self.controller.change_direction(left, False)
 
-wheeled = Vehicle(Wheels())
-tracked = Vehicle(Tracks())
+wheeled = Vehicle(Wheels()) # ruedas
+tracked = Vehicle(Tracks()) # pistas
 
 wheeled.turn(True)
 tracked.turn(False)
@@ -116,9 +116,9 @@ class Middle(Top):
     def m_middle(self):
         print("Medio")
 
-# class Bottom(Middle):
-# class Bottom(Top, Middle):   # TypeError: Cannot create a consistent method resolution order (MRO) for bases Top, Middle
-class Bottom(Middle, Top):    
+#class Bottom(Middle):
+#class Bottom(Top, Middle):   # TypeError: Cannot create a consistent method resolution order (MRO) for bases Top, Middle
+class Bottom(Middle, Top):    # Bottom -> Middle -> Top  (MRO) 
     def m_bottom(self):
         print("abajo")
 
@@ -126,7 +126,7 @@ object = Bottom()
 object.m_bottom()   # abajo
 object.m_middle()   # Medio
 object.m_top()      # Superior
-
+'''
 #------------------------------------------------------------------------------
 # El problema del diamante
 
@@ -134,13 +134,13 @@ class Top:
     def m_top(self):
         print("top")
 
-class Middle_Left(Top):
-    def m_middle(self):
-        print("middle_left")
-
 class Middle_Right(Top):
     def m_middle(self):
         print("middle_right")
+
+class Middle_Left(Top):
+    def m_middle(self):
+        print("middle_left")
 
 class Bottom(Middle_Left, Middle_Right):
 	def m_bottom(self):
@@ -148,7 +148,7 @@ class Bottom(Middle_Left, Middle_Right):
 
 object = Bottom()
 object.m_bottom()
-object.m_middle()
+object.m_middle() # middle_left (porque Middle_Left se declara primero en la clase Bottom)
 object.m_top()
 
 #------------------------------------------------------------------------------
@@ -171,9 +171,9 @@ class Mouse:
  
 class LabMouse(Mouse):
     def __str__(self):
-        #return super().__str__() + ", Saludos"
-        return Mouse.__str__(self) + ", Saludos"
+        return super().__str__() + ", Saludos"
+        #return Mouse.__str__(self) + ", Saludos"
  
 professor_mouse = LabMouse("Profesor Mouse")
-print(professor_mouse, Mouse.Population) # Imprime "Hola, mi nombre es Profesor Mouse 1"
+print(professor_mouse, Mouse.Population) # Imprime "Hola, mi nombre es Profesor Mouse Saludos 1"
 
