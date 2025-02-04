@@ -11,7 +11,9 @@ class Persona:
 class Estudiante(Persona):
     counter = 0
     def __init__(self, nombre, fecha_nacimiento, carrera):
-        super().__init__(nombre, fecha_nacimiento)
+        #super().__init__(nombre, fecha_nacimiento)
+        self.nombre = nombre
+        self.fecha_nacimiento = fecha_nacimiento
         self.carrera = carrera
         Estudiante.counter += 1
     
@@ -41,13 +43,14 @@ class ProfesorTitular(Profesor):
     def mostrar_datos(self):
         super().mostrar_datos()
         print(f'Departamento: {self.departamento}')
-
+'''
     def __str__(self):
         return ("{" + "Nombre:" + self.nombre + ", " 
                     + "fecha:"  + str(self.fecha_nacimiento) + ", "
                     + "materia:" + self.materia + ", "
                     + "departamento:" + self.departamento 
                     + "}")        
+'''
 
 def printBases(cls):    # Indica la clase padre, (Muestra la Herencia)
     print('( ', end='')
@@ -55,14 +58,17 @@ def printBases(cls):    # Indica la clase padre, (Muestra la Herencia)
         print(x.__name__, end=' ')
     print(')')
 
-
 # Ejemplo de uso
+juanito = Persona('Juan Pérez', date(1980, 5, 25))
+
 estudiante = Estudiante('Pepito', date(2005, 5, 23), 'ISC')
 estudiantes = []
 estudiantes.append(Estudiante("Ana López", date(1985, 12, 15), "MTR"))
 estudiantes.append(Estudiante("Pedro Infante", date(1970, 3, 3), "ELE"))
+print("pedrito: ",estudiantes[1].nombre) # ?? 
+estudiantes[1].mostrar_datos() # ?? 
 
-profesor = Profesor('Candido Pérez', date(1980,5, 25) , 'Estructuras de Datos')
+profesor = Profesor('Candido Pérez', date(1980,5, 25) , 'Matematicas')
 profesor_titular = ProfesorTitular('Gutierritos', date(1970, 10, 1), 'Inteligencia Artificial', 'ISC')
 
 print("Datos del Estudiante:")
@@ -71,12 +77,13 @@ print("\nDatos del Profesor:")
 profesor.mostrar_datos()
 print("\nDatos del Profesor Titular:")
 profesor_titular.mostrar_datos()
+print("---------->")
 print(profesor_titular)
-
+print("<----------")
 print("Clase: ", type(profesor_titular).__name__)     # type(obj) es la clase a la que pertenece el objet
 print("Clase: ", profesor_titular.__class__.__name__)
 
-print("Herencia: ", ProfesorTitular.__bases__)
+print("Herencia: ", ProfesorTitular.__bases__) # Indica la clase padre
 printBases(ProfesorTitular) # Muestra la Herencia
 
 print("dict: ", profesor_titular.__dict__) 
@@ -93,7 +100,11 @@ print(profesor_titular.__module__) # __main__
 
 texto3=""
 texto1= "UPA"
-texto2= "UPA"
+texto2= "UPa"
 texto3 += texto1 
-print(texto1 is texto3) # True
-print(texto1 == texto3) # True
+print(texto1 is texto3) # is compara si son el mismo objeto
+print(texto1 == texto3) # == compara si son iguales los valores
+
+for est in estudiantes:
+    print(est.mostrar_datos())
+print("Total de Estudiantes: ", Estudiante.counter)
