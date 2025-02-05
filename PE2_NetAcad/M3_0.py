@@ -1,9 +1,9 @@
 from datetime import date  # Para manejar fechas
 
 class Persona:
-    def __init__(self, nombre, fecha_nacimiento):
+    def __init__(self, nombre, fecha):
         self.nombre = nombre
-        self.fecha_nacimiento = fecha_nacimiento
+        self.fecha_nacimiento = fecha
     
     def mostrar_datos(self):
         print(f'Nombre: {self.nombre}, Fecha Nacimiento: {self.fecha_nacimiento}')
@@ -26,28 +26,28 @@ class Estudiante(Persona):
 
 
 class Profesor(Persona):
-    def __init__(self, nombre, fecha_nacimiento, materia):
+    def __init__(self, nombre, fecha_nacimiento, sueldo):
         super().__init__(nombre, fecha_nacimiento)
-        self.materia = materia
+        self.sueldo = sueldo
 
     def mostrar_datos(self):
         super().mostrar_datos()
-        print(f'Materia: {self.materia}')
+        print(f'Sueldo: {self.sueldo}')
 
 
 class ProfesorTitular(Profesor):
-    def __init__(self, nombre, fecha_nacimiento, materia, departamento):
-        super().__init__(nombre, fecha_nacimiento, materia)
+    def __init__(self, nombre, fecha_nacimiento, sueldo, departamento):
+        super().__init__(nombre, fecha_nacimiento, sueldo)
         self.departamento = departamento
     
     def mostrar_datos(self):
         super().mostrar_datos()
         print(f'Departamento: {self.departamento}')
-'''
-    def __str__(self):
+
+'''    def __str__(self):
         return ("{" + "Nombre:" + self.nombre + ", " 
                     + "fecha:"  + str(self.fecha_nacimiento) + ", "
-                    + "materia:" + self.materia + ", "
+                    + "sueldo:" + str(self.sueldo) + ", "
                     + "departamento:" + self.departamento 
                     + "}")        
 '''
@@ -59,17 +59,21 @@ def printBases(cls):    # Indica la clase padre, (Muestra la Herencia)
     print(')')
 
 # Ejemplo de uso
-juanito = Persona('Juan Pérez', date(1980, 5, 25))
 
+juanito = Persona('Juan Pérez', date(1980, 5, 25))
+print(juanito.nombre)
 estudiante = Estudiante('Pepito', date(2005, 5, 23), 'ISC')
+estudiante.mostrar_datos()
+
+
 estudiantes = []
 estudiantes.append(Estudiante("Ana López", date(1985, 12, 15), "MTR"))
 estudiantes.append(Estudiante("Pedro Infante", date(1970, 3, 3), "ELE"))
 print("pedrito: ",estudiantes[1].nombre) # ?? 
 estudiantes[1].mostrar_datos() # ?? 
 
-profesor = Profesor('Candido Pérez', date(1980,5, 25) , 'Matematicas')
-profesor_titular = ProfesorTitular('Gutierritos', date(1970, 10, 1), 'Inteligencia Artificial', 'ISC')
+profesor = Profesor('Candido Pérez', date(1980,5, 25) , 123.45)
+profesor_titular = ProfesorTitular('Gutierritos', date(1970, 10, 1), 500, 'ISC')
 
 print("Datos del Estudiante:")
 estudiante.mostrar_datos()
