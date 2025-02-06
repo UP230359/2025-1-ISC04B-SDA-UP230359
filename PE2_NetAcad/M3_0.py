@@ -6,7 +6,7 @@ class Persona:
         self.fecha_nacimiento = fecha
     
     def mostrar_datos(self):
-        print(f'Nombre: {self.nombre}, Fecha Nacimiento: {self.fecha_nacimiento}')
+        print(f'Nombre: {self.nombre}, Fecha Nacimiento: {self.fecha_nacimiento} ', end='')
 
 class Estudiante(Persona):
     counter = 0
@@ -44,13 +44,13 @@ class ProfesorTitular(Profesor):
         super().mostrar_datos()
         print(f'Departamento: {self.departamento}')
 
-'''    def __str__(self):
+    def __str__(self):
         return ("{" + "Nombre:" + self.nombre + ", " 
                     + "fecha:"  + str(self.fecha_nacimiento) + ", "
                     + "sueldo:" + str(self.sueldo) + ", "
                     + "departamento:" + self.departamento 
                     + "}")        
-'''
+
 
 def printBases(cls):    # Indica la clase padre, (Muestra la Herencia)
     print('( ', end='')
