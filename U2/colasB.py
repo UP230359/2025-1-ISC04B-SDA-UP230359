@@ -21,14 +21,16 @@ class Cola:
         if self.isEmpty():
             self.primero = nuevo
         else:
-            self.sig = nuevo
+            actual = self.primero
+            while actual:
+                if actual.sig == None:
+                    actual.sig = nuevo
+                    break
+                actual = actual.sig    
             
-            nuevo = valor
-            
-            self.primero.sig = nuevo
-            self.primero = nuevo
-            
-            
+    def size(self):
+        pass
+    
 
         
 
@@ -37,5 +39,8 @@ cola = Cola()
 print(cola.isEmpty())
 cola.encolar("Jesus")
 cola.encolar("Maria")
+cola.encolar("Jose")
+cola.encolar("Santo")
+
 
 
