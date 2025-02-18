@@ -5,7 +5,6 @@ class Nodo:
                 
     def __str__(self):
         return self.dato + "->" + str(self.sig)
-    
 
     def getData(self):
         return self.dato

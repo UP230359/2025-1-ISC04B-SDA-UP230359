@@ -69,9 +69,13 @@ print("Shuffle", aleatorios)
 myList = []
 for i in range(1, 30+1):
     myList.append(random.randint(0,20))
-    unicos= list(dict.fromkeys(myList))
+
+unicos= list(dict.fromkeys(myList))
+unicos2 = list(set(myList))
 print("Con Duplicados", myList)
-print("Sin Duplicados", unicos)
+print("Sin Duplicados", unicos)   # mantiene orden de origen
+print("Sin Duplicados", unicos2)  # los ordena
+
 
 print(random.sample("ABCDEFGH", 4))
 
