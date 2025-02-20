@@ -11,6 +11,7 @@ class Nodo:
 class Cola:
     def __init__(self):
         self.primero = None
+        self.ultimo = None
         self.size = 0
         
     def isEmpty(self):
