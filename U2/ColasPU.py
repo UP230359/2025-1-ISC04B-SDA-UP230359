@@ -25,16 +25,48 @@ class Cola:
             self.primero = nuevo
             self.ultimo = nuevo
         else:
-            pass
+            self.ultimo.sig = nuevo
+            self.ultimo = nuevo
+                
+                        
+    def dequeue(self):
+        if self.isEmpty():
+            return None
+        valor = self.primero.valor
+        return valor
+    
+    def peek(self):
+        if self.isEmpty():
+            return None
+        return self.primero.valor
+        
+    
+            
     
 def main():
     cola = Cola()
     cola.enqueue(5)
+    cola.enqueue(10)
+    cola.enqueue(15)
+    print("primero: ", cola.primero)
+    print("ultimo: ",cola.ultimo)
+    print(cola.peek())
+    print("---------")
+    '''
+    print(cola.primero)
+    print(cola.ultimo)
     
-
-
+    print(cola.dequeue())
+    print(cola.dequeue())
+    print(cola.dequeue())
+    print(cola.dequeue())
+    print(cola.dequeue())
+    
+    print(cola.primero)
+    print(cola.ultimo)
+    '''
+    
 if __name__ == "__main__":  
     os.system("cls") 
     main()
-    print(". . . Hecho")
     os.system("pause")
