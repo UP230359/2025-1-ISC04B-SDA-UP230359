@@ -32,7 +32,11 @@ class Cola:
     def dequeue(self):
         if self.isEmpty():
             return None
-        valor = self.primero.valor
+        self.size-=1
+        valor=self.primero.valor
+        self.primero =self.primero.sig
+        if self.primero== None:
+            self.ultimo = None
         return valor
     
     def peek(self):
@@ -40,18 +44,26 @@ class Cola:
             return None
         return self.primero.valor
         
-    
+    def isFull():
+        pass    
             
     
 def main():
-    cola = Cola()
+    cola = Cola()   # infinito
+    cola2 = Cola(5) # tamaño maximo 5
     cola.enqueue(5)
     cola.enqueue(10)
     cola.enqueue(15)
     print("primero: ", cola.primero)
     print("ultimo: ",cola.ultimo)
-    print(cola.peek())
     print("---------")
+    print(cola.dequeue())
+    print(cola.dequeue())
+    print(cola.dequeue())
+    print(cola.dequeue())
+    print("primero: ", cola.primero)
+    print("ultimo: ",cola.ultimo)
+    
     '''
     print(cola.primero)
     print(cola.ultimo)
