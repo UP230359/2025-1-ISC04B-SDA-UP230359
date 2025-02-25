@@ -1,0 +1,22 @@
+Algorithm: Postfix to value
+P = Postfix Expression Vector 
+Value = Result
+
+1.	add ")" at the final P as centinela
+2.	Scan P until find ")"
+	3.	If is an operand, push to Stack
+	4.	If is an operator:
+		a)	B=pop from Stack, A=pop from Stack
+		b)	C = A operator B
+		c)	push(C) to Stack
+5.	Value = pop from  Stack
+
+		
+infix = '5 * ( 6 + 2 ) - 12 / 4'	
+posfix = '5 6 2 + * 12 4 / -'
+
+P = posfix.split()
+P = ['5', '6', '2', '+', '*', '12', '4', '/', '-']
+Value = 37
+
+TablaG.py

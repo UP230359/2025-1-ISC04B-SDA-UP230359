@@ -38,5 +38,6 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = TablaApp(root)
     root.mainloop()    
+    print(eval("2+2"))
     print(". . .H e c h o")      
    

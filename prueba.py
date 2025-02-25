@@ -9,7 +9,9 @@ d = "".join(c)
 print(d)
 
 if a ==5:
-print("Son iguales")
+    print("Son iguales")
 else:
-print("No son iguales")
+    print("No son iguales")
+
+
     
