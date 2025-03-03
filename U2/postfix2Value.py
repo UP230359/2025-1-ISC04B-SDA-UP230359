@@ -1,4 +1,6 @@
 import os
+#import math 
+from math import log10 as log
 
 def postfix2Value(postfix):
     lista = postfix.split()
@@ -25,6 +27,9 @@ infix = '2 ^ 4 / ( 4 * 1 ) + log ( 110 - 10 ) ^ 2'
 posfix = '2 4 ^ 4 1 * / 110 10 - log 2 ^ +'
 valor = 8
 
+#x = math.log10(100)
+x = log(100)
+print(x)
 valor = postfix2Value(postfix)
 print(valor)
 
