@@ -1,6 +1,6 @@
 import os
 #import math 
-from math import log10 as log
+from math import log10, log
 
 def postfix2Value(postfix):
     lista = postfix.split()
